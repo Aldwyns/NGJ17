@@ -25,37 +25,26 @@ public class PlayerController : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, new Vector3(0, -1, 0), out hit, 100f))
         {
-            if (Vector3.Distance(hit.point,this.transform.position) <= 0.1f)
+            if (hit.transform != this.transform)
             {
-                //this.transform.position = hit.point; 
-                //moveDir.y = 0;
-                //frameDir.y = 0;
-                onGround = true;
-                jumping = false;
-            }
-            else if ((!jumping && Vector3.Distance(hit.point, this.transform.position) <= 0.5f))
-            {
-                //frameDir.y = (gravity * 0.5f);
-            }
-            else if ((!jumping && Vector3.Distance(hit.point, this.transform.position) > 0.1f))
-            {
-                //frameDir.y = gravity;
-                onGround = false;
-            }
+                Debug.Log(hit.transform.name);
             
+                if (Vector3.Distance(hit.point,this.transform.position) <= 0.5f)
+                {
+                    onGround = true;
+                    jumping = false;
+                }
+                else if ((!jumping && Vector3.Distance(hit.point, this.transform.position) > 0.5f))
+                {
+                    onGround = false;
+                }
+            }
         }
-        else
-        {
-            //frameDir.y = gravity;
-            //onGround = false;
-        }
-        //frameDir.y = gravity;
-
 
         if (Input.GetAxis("Vertical") > 0 && onGround && !jumping)
         {
             //frameDir.y = (Input.GetAxis("Vertical") * jumpSpeed);
-            transform.GetComponent<Rigidbody>().velocity = transform.GetComponent<Rigidbody>().velocity + (new Vector3(0, 1, 0) * 10);
+            transform.GetComponent<Rigidbody>().velocity = (((new Vector3(0,1,0) + hit.normal) / 2) * 4) ;
             jumping = true;
             startJumpTime = Time.time;
         }
