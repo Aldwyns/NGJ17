@@ -1,6 +1,0 @@
-5.6.0f3:3.1.0.0
-StandaloneWindows
-H:/Programs/Unity3D/Editor/Data/Managed/UnityEngine.dll
-H:/Programs/Unity3D/Editor/Data/Managed/UnityEditor.dll
-H:/Programs/Unity3D/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll
-H:/Programs/Unity3D/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll
