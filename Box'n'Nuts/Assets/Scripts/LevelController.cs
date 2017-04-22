@@ -7,7 +7,7 @@ public class LevelController : MonoBehaviour {
     public int playerNum = 4;
     public GameObject playerPawn;
     List<Transform> players = new List<Transform>();
-    List<int> playerDeathCount = new List<int>();
+    public List<int> playerDeathCount = new List<int>();
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class LevelController : MonoBehaviour {
 
     public void AddDeath(int playerNum)
     {
-        playerDeathCount[playerNum] = playerDeathCount[playerNum]++;
+        playerDeathCount[playerNum]++;
     }
 
     public void PlayerSpawn()
