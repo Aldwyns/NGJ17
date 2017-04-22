@@ -83,6 +83,10 @@ public class UIController : MonoBehaviour {
                 {
                     child.GetComponent<Text>().text = LevelControllerObject.playerDeathCount[0].ToString();
                 }
+                if (child.transform.name == "BG")
+                {
+                    child.GetComponent<Image>().color = Color.blue;
+                } 
             }
         }
         if (UIElement[1])
@@ -92,6 +96,10 @@ public class UIController : MonoBehaviour {
                 if (child.transform.name == "Score")
                 {
                     child.GetComponent<Text>().text = LevelControllerObject.playerDeathCount[1].ToString();
+                }
+                if (child.transform.name == "BG")
+                {
+                    child.GetComponent<Image>().color = Color.red;
                 }
             }
         }
@@ -103,6 +111,10 @@ public class UIController : MonoBehaviour {
                 {
                     child.GetComponent<Text>().text = LevelControllerObject.playerDeathCount[2].ToString();
                 }
+                if (child.transform.name == "BG")
+                {
+                    child.GetComponent<Image>().color = Color.yellow;
+                }
             }
         }
         if (UIElement[3])
@@ -112,6 +124,10 @@ public class UIController : MonoBehaviour {
                 if (child.transform.name == "Score")
                 {
                     child.GetComponent<Text>().text = LevelControllerObject.playerDeathCount[3].ToString();
+                }
+                if (child.transform.name == "BG")
+                {
+                    child.GetComponent<Image>().color = Color.white;
                 }
             }
         }
