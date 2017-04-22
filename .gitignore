@@ -65,3 +65,5 @@ Box'n'Nuts/Assets/Models/Animations/spawn2.fbx.meta
 Box'n'Nuts/Assets/Scripts/LevelController.cs.meta
 Box'n'Nuts/Assets/Scripts/UIController.cs.meta
 Box'n'Nuts/Assets/Prefabs/UIText.prefab.meta
+Box'n'Nuts/Assets/Prefabs/DeathField.prefab.meta
+Box'n'Nuts/Assets/Scripts/DeathField.cs.meta

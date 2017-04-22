@@ -9,6 +9,8 @@ public class LevelController : MonoBehaviour {
     List<Transform> players = new List<Transform>();
     public List<int> playerDeathCount = new List<int>();
 
+    public List<Material> colors = new List<Material>();
+
 	// Use this for initialization
 	void Start () {
         PlayerSpawn();
@@ -31,6 +33,7 @@ public class LevelController : MonoBehaviour {
             GameObject tmp = Instantiate(playerPawn);
             players.Add(tmp.transform);
             tmp.transform.name = "Player" + i;
+            tmp.GetComponentInChildren<Renderer>().material = colors[i];
             tmp.GetComponent<PlayerController>().playerNum = i;
             tmp.GetComponent<deathAndRespawn>().respawn();
             playerDeathCount.Add(0);
