@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: StartScreenThing.ma
-//Last modified: Sat, Apr 22, 2017 09:13:51 PM
+//Last modified: Sat, Apr 22, 2017 09:25:38 PM
 //Codeset: 1252
 requires maya "2015";
 currentUnit -l centimeter -a degree -t film;
@@ -19,13 +19,6 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -n "imagePlane1" -p "perspShape";
-createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
-	setAttr -k off ".v";
-	setAttr ".fc" 50;
-	setAttr ".imn" -type "string" "C:/Users/Jon/Pictures/placeHolder.png";
-	setAttr ".cov" -type "short2" 1920 1080 ;
-	setAttr ".w" 19.2;
-	setAttr ".h" 10.799999999999999;
 createNode transform -s -n "top";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 100.1 0 ;
@@ -2635,7 +2628,7 @@ createNode mesh -n "pCubeShape74" -p "pCube74";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube75";
-	setAttr ".t" -type "double3" 0.95917774013452117 8.218395877332906 7.814088942977536 ;
+	setAttr ".t" -type "double3" 0.92824272714284461 8.3869463406633997 7.5990203265977581 ;
 	setAttr ".r" -type "double3" 84.588558115633575 27.626555103813967 -110.23976275715523 ;
 createNode mesh -n "pCubeShape75" -p "pCube75";
 	setAttr -k off ".v";
@@ -16670,7 +16663,7 @@ createNode mesh -n "pCubeShape475" -p "pCube475";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube476";
-	setAttr ".t" -type "double3" 0.80456174961519622 8.3477448754087167 -19.256508814474611 ;
+	setAttr ".t" -type "double3" 0.059435043580372771 10.815165754610318 -20.128717657426243 ;
 	setAttr ".r" -type "double3" -75.765840328277434 -8.7345722519444724 8.7605943552899976 ;
 createNode mesh -n "pCubeShape476" -p "pCube476";
 	setAttr -k off ".v";
@@ -16705,7 +16698,7 @@ createNode mesh -n "pCubeShape476" -p "pCube476";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube477";
-	setAttr ".t" -type "double3" 0.91796191777077496 7.7967228818725314 -19.724876154709118 ;
+	setAttr ".t" -type "double3" 0.21700275490948773 10.007315987963375 -19.98581944954525 ;
 	setAttr ".r" -type "double3" 96.333951041571709 -13.384090006812405 -156.72607601081563 ;
 createNode mesh -n "pCubeShape477" -p "pCube477";
 	setAttr -k off ".v";
@@ -16740,7 +16733,7 @@ createNode mesh -n "pCubeShape477" -p "pCube477";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube478";
-	setAttr ".t" -type "double3" 0.65087621318031097 9.1560379220423567 -19.778448286867295 ;
+	setAttr ".t" -type "double3" -0.091966261944356198 11.623458801243887 -20.868777140597899 ;
 	setAttr ".r" -type "double3" -5.928208649352408 7.8201299523812287 57.74195258245787 ;
 createNode mesh -n "pCubeShape478" -p "pCube478";
 	setAttr -k off ".v";
@@ -16774,9 +16767,709 @@ createNode mesh -n "pCubeShape478" -p "pCube478";
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube479";
+	setAttr ".t" -type "double3" 0.64663564755441172 9.283663139933557 -21.773091114736264 ;
+	setAttr ".r" -type "double3" -75.765840328277434 -8.7345722519444724 8.7605943552899976 ;
+createNode mesh -n "pCubeShape479" -p "pCube479";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube480";
+	setAttr ".t" -type "double3" 0.71816388370618256 8.8586498704307086 -20.612309010254979 ;
+	setAttr ".r" -type "double3" -46.527440643525225 16.206197780749271 0.82477996709726387 ;
+createNode mesh -n "pCubeShape480" -p "pCube480";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube481";
+	setAttr ".t" -type "double3" 0.78879456340073517 8.6050159285077754 -22.588043964650872 ;
+	setAttr ".r" -type "double3" 96.333951041571709 -13.384090006812405 -156.72607601081563 ;
+createNode mesh -n "pCubeShape481" -p "pCube481";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube482";
+	setAttr ".t" -type "double3" 0.82065852665646588 8.3696763180421438 -21.205930209480467 ;
+	setAttr ".r" -type "double3" 6.7724782359354041 8.7643254444076639 24.279605525909854 ;
+createNode mesh -n "pCubeShape482" -p "pCube482";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube483";
+	setAttr ".t" -type "double3" 0.58578566736452586 9.6665387936021929 -23.161275083896133 ;
+	setAttr ".r" -type "double3" -20.823101547128545 -18.064588503318333 48.369353056489544 ;
+createNode mesh -n "pCubeShape483" -p "pCube483";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube484";
+	setAttr ".t" -type "double3" 1.8064045060405718 3.8341165411572327 2.9697322284877252 ;
+	setAttr ".r" -type "double3" 103.33209419270588 34.728562216618286 -107.07127217055225 ;
+createNode mesh -n "pCubeShape484" -p "pCube484";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube485";
+	setAttr ".t" -type "double3" 5.0825285030469596 12.145387960253576 -1.0628385289453819 ;
+	setAttr ".r" -type "double3" 21.17951556918738 -5.690225066516847 -112.5082099106187 ;
+createNode mesh -n "pCubeShape485" -p "pCube485";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube486";
+	setAttr ".t" -type "double3" 4.4226711817104212 15.397570635778514 0.79999833865877368 ;
+	setAttr ".r" -type "double3" -84.074569011870636 16.728138319288909 43.274057378577261 ;
+createNode mesh -n "pCubeShape486" -p "pCube486";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube488";
+	setAttr ".t" -type "double3" 4.8884640881886492 13.119460101747201 -0.84595040040360825 ;
+	setAttr ".r" -type "double3" -29.167499434917165 23.112144603818233 -38.609943485672773 ;
+createNode mesh -n "pCubeShape488" -p "pCube488";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube489";
+	setAttr ".t" -type "double3" 5.3236542855752527 10.831333095005307 0.61866429609369744 ;
+	setAttr ".r" -type "double3" 2.7081536028501989 0.96546704540481032 -96.385969737377081 ;
+createNode mesh -n "pCubeShape489" -p "pCube489";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube490";
+	setAttr ".t" -type "double3" 4.5979749366208145 14.529224297542678 0.38672999073835768 ;
+	setAttr ".r" -type "double3" -88.306431717368937 39.52381203347052 0.25494903619478243 ;
+createNode mesh -n "pCubeShape490" -p "pCube490";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube491";
+	setAttr ".t" -type "double3" 4.6503088979934004 14.149985755048885 2.5197202212234129 ;
+	setAttr ".r" -type "double3" -79.891826432910577 -14.121792540941641 -41.273259541494483 ;
+createNode mesh -n "pCubeShape491" -p "pCube491";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube492";
+	setAttr ".t" -type "double3" 4.9275249957022309 12.820602403699077 1.0431795267319242 ;
+	setAttr ".r" -type "double3" -29.167499434917165 23.112144603818233 -38.609943485672773 ;
+createNode mesh -n "pCubeShape492" -p "pCube492";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube493";
+	setAttr ".t" -type "double3" 4.8043268774401353 13.410326507331774 1.7194821668307332 ;
+	setAttr ".r" -type "double3" 2.7081536028501989 0.96546704540481032 -96.385969737377081 ;
+createNode mesh -n "pCubeShape493" -p "pCube493";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube494";
+	setAttr ".t" -type "double3" 5.1219953621622833 11.851842275598763 0.68765236251673834 ;
+	setAttr ".r" -type "double3" 84.588558115633575 27.626555103813967 -110.23976275715523 ;
+createNode mesh -n "pCubeShape494" -p "pCube494";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube495";
+	setAttr ".t" -type "double3" 5.0232327599813624 12.389007254639518 0.0188217648605562 ;
+	setAttr ".r" -type "double3" -88.306431717368937 39.52381203347052 0.25494903619478243 ;
+createNode mesh -n "pCubeShape495" -p "pCube495";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube496";
+	setAttr ".t" -type "double3" 5.1294588563072461 11.934902399115995 -1.5867050521495889 ;
+	setAttr ".r" -type "double3" -76.0653511062402 3.1391551328217471 -59.765020781138375 ;
+createNode mesh -n "pCubeShape496" -p "pCube496";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube497";
+	setAttr ".t" -type "double3" 5.0456206548664975 12.202449026137295 1.3886269648138443 ;
+	setAttr ".r" -type "double3" -11.741654907871691 7.2150507171280909 7.0090464339060352 ;
+createNode mesh -n "pCubeShape497" -p "pCube497";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube498";
+	setAttr ".t" -type "double3" 4.923555449241074 12.825306863016602 1.3337775596591106 ;
+	setAttr ".r" -type "double3" -57.725918134503701 30.018913370853852 77.896019140403581 ;
+createNode mesh -n "pCubeShape498" -p "pCube498";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube499";
+	setAttr ".t" -type "double3" 4.806502450725243 13.499508716337727 -0.16504013030935116 ;
+	setAttr ".r" -type "double3" -31.544342657668224 -57.40643165711559 -68.380111794705797 ;
+createNode mesh -n "pCubeShape499" -p "pCube499";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 3 ".lnk";
-	setAttr -s 3 ".slnk";
+	setAttr -s 5 ".lnk";
+	setAttr -s 5 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -16884,19 +17577,31 @@ createNode lambert -n "blue";
 	setAttr ".c" -type "float3" 0.14509805 0.27450982 0.96470588 ;
 createNode shadingEngine -n "lambert2SG";
 	setAttr ".ihi" 0;
-	setAttr -s 478 ".dsm";
+	setAttr -s 206 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 createNode lambert -n "green";
 	setAttr ".c" -type "float3" 0 0.59607846 0.10980392 ;
+createNode shadingEngine -n "greenSG";
+	setAttr ".ihi" 0;
+	setAttr -s 278 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+createNode lambert -n "gray";
+	setAttr ".c" -type "float3" 0.27000001 0.27000001 0.27000001 ;
+createNode shadingEngine -n "graySG";
+	setAttr ".ihi" 0;
+	setAttr -s 14 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo3";
 select -ne :time1;
 	setAttr ".o" 31;
 	setAttr ".unw" 31;
 select -ne :renderPartition;
-	setAttr -s 3 ".st";
+	setAttr -s 5 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 4 ".s";
+	setAttr -s 5 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -16929,14 +17634,17 @@ connectAttr "persp_rotateZ.o" ":persp.rz";
 connectAttr "persp_scaleX.o" ":persp.sx";
 connectAttr "persp_scaleY.o" ":persp.sy";
 connectAttr "persp_scaleZ.o" ":persp.sz";
-connectAttr "imagePlaneShape1.msg" ":perspShape.ip" -na;
 connectAttr "polyCube1.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "greenSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "graySG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "greenSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "graySG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "blue.oc" "lambert2SG.ss";
@@ -17145,286 +17853,312 @@ connectAttr "pCubeShape4.iog" "lambert2SG.dsm" -na;
 connectAttr "pCubeShape3.iog" "lambert2SG.dsm" -na;
 connectAttr "pCubeShape2.iog" "lambert2SG.dsm" -na;
 connectAttr "pCubeShape1.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape206.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape207.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape208.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape209.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape210.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape211.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape212.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape213.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape214.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape215.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape216.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape217.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape218.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape219.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape220.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape221.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape222.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape223.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape224.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape225.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape226.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape227.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape228.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape229.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape230.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape231.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape232.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape233.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape234.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape235.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape236.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape237.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape238.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape239.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape240.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape241.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape242.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape243.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape244.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape245.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape246.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape247.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape248.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape249.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape250.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape251.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape252.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape253.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape254.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape255.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape256.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape257.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape258.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape259.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape260.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape261.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape262.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape263.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape264.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape265.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape266.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape267.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape268.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape269.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape270.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape271.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape272.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape273.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape274.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape275.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape276.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape277.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape278.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape279.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape280.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape281.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape282.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape283.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape284.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape285.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape286.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape287.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape288.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape289.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape290.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape291.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape292.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape293.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape294.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape295.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape296.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape297.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape298.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape299.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape300.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape301.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape302.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape303.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape304.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape305.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape306.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape307.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape308.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape309.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape310.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape311.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape312.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape313.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape314.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape315.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape316.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape317.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape318.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape319.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape320.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape321.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape322.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape323.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape324.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape325.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape326.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape327.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape328.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape329.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape330.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape331.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape332.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape333.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape334.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape335.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape336.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape337.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape338.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape339.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape340.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape341.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape342.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape343.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape344.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape345.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape346.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape347.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape348.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape349.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape350.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape351.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape352.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape353.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape354.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape355.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape356.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape357.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape358.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape359.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape360.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape361.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape362.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape363.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape364.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape365.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape366.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape367.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape368.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape369.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape370.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape371.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape372.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape373.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape374.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape375.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape376.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape377.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape378.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape379.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape380.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape381.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape382.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape383.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape384.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape385.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape386.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape387.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape388.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape389.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape390.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape391.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape392.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape393.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape394.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape395.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape396.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape397.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape398.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape399.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape400.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape401.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape402.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape403.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape404.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape405.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape406.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape407.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape408.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape409.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape410.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape411.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape412.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape413.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape414.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape415.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape416.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape417.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape418.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape419.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape420.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape421.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape422.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape423.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape424.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape425.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape426.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape427.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape428.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape429.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape430.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape431.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape432.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape433.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape434.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape435.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape436.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape437.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape438.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape439.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape440.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape441.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape442.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape443.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape444.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape445.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape446.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape447.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape448.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape449.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape450.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape451.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape452.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape453.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape454.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape455.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape456.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape457.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape458.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape459.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape460.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape461.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape462.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape463.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape464.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape465.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape466.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape467.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape468.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape469.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape470.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape471.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape472.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape473.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape474.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape475.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape476.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape477.iog" "lambert2SG.dsm" -na;
-connectAttr "pCubeShape478.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape484.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
 connectAttr "blue.msg" "materialInfo1.m";
+connectAttr "green.oc" "greenSG.ss";
+connectAttr "pCubeShape483.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape482.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape481.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape480.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape479.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape478.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape477.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape476.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape475.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape474.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape473.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape472.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape471.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape470.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape469.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape468.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape467.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape466.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape465.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape464.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape463.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape462.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape461.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape460.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape459.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape458.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape457.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape456.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape455.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape454.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape453.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape452.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape451.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape450.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape449.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape448.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape447.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape446.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape445.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape444.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape443.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape442.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape441.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape440.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape439.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape438.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape437.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape436.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape435.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape434.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape433.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape432.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape431.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape430.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape429.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape428.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape427.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape426.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape425.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape424.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape423.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape422.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape421.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape420.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape419.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape418.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape417.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape416.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape415.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape414.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape413.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape412.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape411.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape410.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape409.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape408.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape407.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape406.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape405.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape404.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape403.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape402.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape401.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape400.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape399.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape398.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape397.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape396.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape395.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape394.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape393.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape392.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape391.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape390.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape389.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape388.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape387.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape386.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape385.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape384.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape383.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape382.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape381.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape380.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape379.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape378.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape377.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape376.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape375.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape374.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape373.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape372.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape371.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape370.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape369.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape368.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape367.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape366.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape365.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape364.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape363.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape362.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape361.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape360.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape359.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape358.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape357.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape356.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape355.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape354.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape353.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape352.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape351.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape350.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape349.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape348.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape347.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape346.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape345.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape344.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape343.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape342.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape341.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape340.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape339.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape338.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape337.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape336.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape335.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape334.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape333.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape332.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape331.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape330.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape329.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape328.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape327.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape326.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape325.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape324.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape323.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape322.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape321.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape320.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape319.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape318.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape317.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape316.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape315.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape314.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape313.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape312.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape311.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape310.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape309.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape308.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape307.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape306.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape305.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape304.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape303.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape302.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape301.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape300.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape299.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape298.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape297.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape296.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape295.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape294.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape293.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape292.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape291.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape290.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape289.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape288.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape287.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape286.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape285.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape284.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape283.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape282.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape281.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape280.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape279.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape278.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape277.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape276.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape275.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape274.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape273.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape272.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape271.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape270.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape269.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape268.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape267.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape266.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape265.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape264.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape263.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape262.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape261.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape260.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape259.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape258.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape257.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape256.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape255.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape254.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape253.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape252.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape251.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape250.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape249.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape248.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape247.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape246.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape245.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape244.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape243.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape242.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape241.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape240.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape239.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape238.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape237.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape236.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape235.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape234.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape233.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape232.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape231.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape230.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape229.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape228.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape227.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape226.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape225.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape224.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape223.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape222.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape221.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape220.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape219.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape218.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape217.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape216.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape215.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape214.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape213.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape212.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape211.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape210.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape209.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape208.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape207.iog" "greenSG.dsm" -na;
+connectAttr "pCubeShape206.iog" "greenSG.dsm" -na;
+connectAttr "greenSG.msg" "materialInfo2.sg";
+connectAttr "green.msg" "materialInfo2.m";
+connectAttr "gray.oc" "graySG.ss";
+connectAttr "pCubeShape486.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape490.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape499.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape496.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape485.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape488.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape495.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape489.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape494.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape497.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape498.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape492.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape493.iog" "graySG.dsm" -na;
+connectAttr "pCubeShape491.iog" "graySG.dsm" -na;
+connectAttr "graySG.msg" "materialInfo3.sg";
+connectAttr "gray.msg" "materialInfo3.m";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "greenSG.pa" ":renderPartition.st" -na;
+connectAttr "graySG.pa" ":renderPartition.st" -na;
 connectAttr "blue.msg" ":defaultShaderList1.s" -na;
 connectAttr "green.msg" ":defaultShaderList1.s" -na;
+connectAttr "gray.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"|persp|perspShape->|imagePlane1|imagePlaneShape1\" \"imageName\" \"C:/Users/Jon/Pictures/placeHolder.png\" 2351006461 \"C:/Users/Jon/Pictures/placeHolder.png\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
-		-scn;
 // End of StartScreenThing.ma
