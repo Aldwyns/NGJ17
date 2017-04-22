@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6a2df1ab23236ba4b869c8653e10a6b1
+timeCreated: 1492886128
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Namskout
+  fontNames:
+  - Namskout
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

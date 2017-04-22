@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b89ef3fa28645e248a7bcd9ddb7e7860
+timeCreated: 1492886128
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KG HAPPY
+  fontNames:
+  - KG HAPPY
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

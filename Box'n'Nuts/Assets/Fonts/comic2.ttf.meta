@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0651d87c36fa0bc4a9915b72c3ede10c
+timeCreated: 1492886127
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gretoon Highlight
+  fontNames:
+  - Gretoon Highlight
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
