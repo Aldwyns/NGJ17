@@ -10,11 +10,17 @@ ModelImporter:
     100004: joint1
     100006: joint2
     100008: joint3
+    100010: head
+    100012: root
+    100014: root 1
     400000: //RootNode
     400002: Cubeman
     400004: joint1
     400006: joint2
     400008: joint3
+    400010: head
+    400012: root
+    400014: root 1
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cubeman
