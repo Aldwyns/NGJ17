@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\animationController.cs" />
     <Compile Include="Assets\Scripts\deathAndRespawn.cs" />
   </ItemGroup>
   <ItemGroup>

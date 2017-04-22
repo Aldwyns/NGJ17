@@ -1,32 +1,15 @@
 fileFormatVersion: 2
-guid: bdad7b18dafb8954ca3c804af57b0cd2
-timeCreated: 1492815677
+guid: 0b3ab672a146f01488f159e8dc0ffe57
+timeCreated: 1492897000
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cubeman
-    100004: joint1
-    100006: joint2
-    100008: joint3
-    100010: head
-    100012: root
-    100014: root 1
     400000: //RootNode
-    400002: Cubeman
-    400004: joint1
-    400006: joint2
-    400008: joint3
-    400010: head
-    400012: root
-    400014: root 1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cubeman
+    4300000: arrow
     9500000: //RootNode
-    11100000: //RootNode
-    13700000: Cubeman
+    13700000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -43,7 +26,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -72,7 +55,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
