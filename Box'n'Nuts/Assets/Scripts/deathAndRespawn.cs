@@ -58,7 +58,7 @@ public class deathAndRespawn : MonoBehaviour
 
 		checkForRespawnCollision(randoXPos, randoYPos);
 		//Fireworks when respawning?
-		anim.spawn();
+		//anim.spawn();
 
 		//disable rigidbody while animating and for getting to know where you are?
 	}

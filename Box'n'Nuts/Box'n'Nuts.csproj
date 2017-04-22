@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\DeathField.cs" />
     <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\animationController.cs" />
     <Compile Include="Assets\Scripts\deathAndRespawn.cs" />
   </ItemGroup>
   <ItemGroup>

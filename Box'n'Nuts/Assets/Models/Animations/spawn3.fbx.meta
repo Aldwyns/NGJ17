@@ -1,34 +1,33 @@
 fileFormatVersion: 2
-guid: 0f09abfab206fea428a2ca7fe4525d07
-timeCreated: 1492864061
+guid: 091ebeb5171c6714a8f251e6b47cf709
+timeCreated: 1492896598
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Cubeman_rigForAnim1:Cubeman
-    100002: Cubeman_rigForAnim1:head
-    100004: Cubeman_rigForAnim1:root
-    100006: Cubeman_rigForAnim1:root 1
+    100000: Cubeman_rigForAnim:Cubeman
+    100002: Cubeman_rigForAnim:head
+    100004: Cubeman_rigForAnim:root
+    100006: Cubeman_rigForAnim:root 1
     100008: //RootNode
     100010: Cubeman
     100012: head
     100014: root
     100016: root 1
-    400000: Cubeman_rigForAnim1:Cubeman
-    400002: Cubeman_rigForAnim1:head
-    400004: Cubeman_rigForAnim1:root
-    400006: Cubeman_rigForAnim1:root 1
+    400000: Cubeman_rigForAnim:Cubeman
+    400002: Cubeman_rigForAnim:head
+    400004: Cubeman_rigForAnim:root
+    400006: Cubeman_rigForAnim:root 1
     400008: //RootNode
     400010: Cubeman
     400012: head
     400014: root
     400016: root 1
-    4300000: Cubeman_rigForAnim1:Cubeman
+    4300000: Cubeman_rigForAnim:Cubeman
     4300002: Cubeman
-    7400000: Jump
+    7400000: Spawn3
     9500000: //RootNode
-    11100000: //RootNode
-    13700000: Cubeman_rigForAnim1:Cubeman
+    13700000: Cubeman_rigForAnim:Cubeman
     13700002: Cubeman
   materials:
     importMaterials: 1
@@ -46,7 +45,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -54,17 +53,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Jump
+      name: Spawn3
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 20
-      wrapMode: 2
+      lastFrame: 22
+      wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -80,13 +79,13 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Cubeman_rigForAnim1:Cubeman
+      - path: Cubeman_rigForAnim:Cubeman
         weight: 1
-      - path: Cubeman_rigForAnim1:root
+      - path: Cubeman_rigForAnim:root
         weight: 1
-      - path: Cubeman_rigForAnim1:root/Cubeman_rigForAnim1:head
+      - path: Cubeman_rigForAnim:root/Cubeman_rigForAnim:head
         weight: 1
-      - path: Cubeman_rigForAnim1:root/Cubeman_rigForAnim1:root 1
+      - path: Cubeman_rigForAnim:root/Cubeman_rigForAnim:root 1
         weight: 1
       maskType: 3
       maskSource: {instanceID: 0}
@@ -114,7 +113,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
   importAnimation: 1
-  copyAvatar: 1
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human: []
@@ -131,8 +130,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: bdad7b18dafb8954ca3c804af57b0cd2,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

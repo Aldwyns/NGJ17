@@ -10,15 +10,25 @@ ModelImporter:
     100004: Cubeman_rigForAnim1:root
     100006: Cubeman_rigForAnim1:root 1
     100008: //RootNode
+    100010: Cubeman
+    100012: head
+    100014: root
+    100016: root 1
     400000: Cubeman_rigForAnim1:Cubeman
     400002: Cubeman_rigForAnim1:head
     400004: Cubeman_rigForAnim1:root
     400006: Cubeman_rigForAnim1:root 1
     400008: //RootNode
+    400010: Cubeman
+    400012: head
+    400014: root
+    400016: root 1
     4300000: Cubeman_rigForAnim1:Cubeman
+    4300002: Cubeman
     7400000: Land
     9500000: //RootNode
     13700000: Cubeman_rigForAnim1:Cubeman
+    13700002: Cubeman
   materials:
     importMaterials: 1
     materialName: 0
