@@ -1,3 +1,4 @@
+Box'n'Nuts/Library/
 Box'n'Nuts/Temp/
 *.swatches
 Box'n'Nuts/Library/metadata/
@@ -55,3 +56,6 @@ Box'n'Nuts/Library/ShaderCache/e/eaf81c6d5474a9fa57b7fd6626462c6e.bin
 Box'n'Nuts/Library/ShaderCache/f/f652c44e743cc6e1f2ecd60f819617a5.bin
 Box'n'Nuts/Library/ShaderCache/f/f6b8b942879c3ba9e40554aaa84ce9c7.bin
 Box'n'Nuts/Library/ShaderCache/f/f7435ebab6568b0f6be2d2f05dd9402c.bin
+Box'n'Nuts/Assets/Models/Animations/Materials/Cubeman_rigForAnim_Cubeman_mat.mat
+Box'n'Nuts/Assets/Models/Animations/Materials/Cubeman_rigForAnim_Cubeman_mat.mat.meta
+Box'n'Nuts/Assets/Models/Animations/spawn1.fbx.meta
