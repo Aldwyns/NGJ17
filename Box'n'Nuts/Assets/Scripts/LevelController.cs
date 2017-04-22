@@ -13,6 +13,10 @@ public class LevelController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (FindObjectOfType<Data>())
+        {
+            playerNum = FindObjectOfType<Data>().playerCount;
+        }
         PlayerSpawn();
 	}
 	
@@ -31,6 +35,7 @@ public class LevelController : MonoBehaviour {
         for (int i = 0; i < playerNum; i++)
         {
             GameObject tmp = Instantiate(playerPawn);
+            Debug.Log(tmp.transform.name);
             players.Add(tmp.transform);
             tmp.transform.name = "Player" + i;
             tmp.GetComponentInChildren<Renderer>().material = colors[i];

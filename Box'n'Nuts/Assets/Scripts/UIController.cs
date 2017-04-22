@@ -20,12 +20,12 @@ public class UIController : MonoBehaviour {
         if (LevelControllerObject.playerNum == 2)
         {
             GameObject tmp =  Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[0].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
             tmp = Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[3].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
@@ -33,17 +33,17 @@ public class UIController : MonoBehaviour {
         else if (LevelControllerObject.playerNum == 3)
         {
             GameObject tmp = Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[0].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
             tmp = Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[1].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
             tmp = Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[2].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
@@ -51,22 +51,22 @@ public class UIController : MonoBehaviour {
         else if (LevelControllerObject.playerNum == 4)
         {
             GameObject tmp = Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[0].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
             tmp = Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[1].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
             tmp = Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[2].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
             tmp = Instantiate(UIText);
-            tmp.transform.parent = this.transform;
+            tmp.transform.SetParent(this.transform);
             tmp.transform.position = UiLocations[3].position;
             tmp.transform.localScale = new Vector3(1, 1, 1);
             UIElement.Add(tmp.transform);
