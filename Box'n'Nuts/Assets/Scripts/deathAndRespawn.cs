@@ -13,12 +13,17 @@ public class deathAndRespawn : MonoBehaviour
 	private float highLimitX = 9f;
 	private float lowLimitY = -3f;
 	private float highLimitY = 4f;
+	private animationController anim;
 
 	private void Start()
 	{
 		if (player==null)
 		{
 			player = this.gameObject.GetComponent<PlayerController>();
+		}
+		if (anim == null)
+		{
+			anim = GetComponent<animationController>();
 		}
 		rig = player.GetComponent<Rigidbody>();
 	}
@@ -32,11 +37,13 @@ public class deathAndRespawn : MonoBehaviour
     public void death()
     {
         respawn();
-            FindObjectOfType<LevelController>().AddDeath(player.GetComponent<PlayerController>().playerNum);
-            //player.score.death();
+        FindObjectOfType<LevelController>().AddDeath(player.GetComponent<PlayerController>().playerNum);
 			
-			//set velocity to 0
-			setVelZero();
+		//set velocity to 0
+		setVelZero();
+
+		//death animation
+		anim.death();
     }
 
 	public void respawn()
@@ -51,7 +58,9 @@ public class deathAndRespawn : MonoBehaviour
 
 		checkForRespawnCollision(randoXPos, randoYPos);
 		//Fireworks when respawning?
+		anim.spawn();
 
+		//disable rigidbody while animating and for getting to know where you are?
 	}
 
 	void checkForRespawnCollision(float X, float Y)
