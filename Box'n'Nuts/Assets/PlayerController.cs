@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    int playerNum;
+    public int playerNum;
+    string HorizontalAxis;
+    string VerticalAxis;
+    string JumpButton;
+
+
     float speed = 2f;
     float gravity = -2f;
-    float jumpSpeed = 25f;
+    float jumpSpeed = 5f;
     bool onGround;
     bool jumping;
     float startJumpTime;
@@ -16,7 +21,9 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    	
+        HorizontalAxis = "HorizontalPlayer" + playerNum;
+        VerticalAxis = "VerticalPlayer" + playerNum;
+        JumpButton = "JumpPlayer" + playerNum;
 	}
 	
 	// Update is called once per frame
@@ -41,10 +48,10 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (Input.GetAxis("Vertical") > 0 && onGround && !jumping)
+        if (Input.GetAxis(JumpButton) > 0 && onGround && !jumping)
         {
             //frameDir.y = (Input.GetAxis("Vertical") * jumpSpeed);
-            transform.GetComponent<Rigidbody>().velocity = (((new Vector3(0,1,0) + hit.normal) / 2) * 4) ;
+            transform.GetComponent<Rigidbody>().velocity = (((new Vector3(0,1,0) + hit.normal) / 2) * jumpSpeed) ;
             jumping = true;
             startJumpTime = Time.time;
         }
@@ -57,7 +64,7 @@ public class PlayerController : MonoBehaviour {
             jumping = false;
         }*/
 
-        frameDir.x = (Input.GetAxis("Horizontal"));
+        frameDir.x = (Input.GetAxis(HorizontalAxis));
 
         //moveDir = moveDir + (frameDir * 1.0f) / 2f;
         moveDir = moveDir + frameDir;
