@@ -6,20 +6,12 @@ public class LevelController : MonoBehaviour {
 
     public int playerNum = 4;
     public GameObject playerPawn;
-    List<Transform> players;
-    List<int> playerDeathCount;
+    List<Transform> players = new List<Transform>();
+    List<int> playerDeathCount = new List<int>();
 
 	// Use this for initialization
 	void Start () {
-        for (int i = 0; i < playerNum; i++)
-        {
-            GameObject tmp = Instantiate(playerPawn);
-            players.Add(tmp.transform);
-            tmp.transform.name = "Player" + i;
-            tmp.GetComponent<PlayerController>().playerNum = i;
-            tmp.GetComponent<deathAndRespawn>().respawn();
-            playerDeathCount.Add(0);
-        }
+        PlayerSpawn();
 	}
 	
 	// Update is called once per frame
@@ -30,5 +22,18 @@ public class LevelController : MonoBehaviour {
     public void AddDeath(int playerNum)
     {
         playerDeathCount[playerNum] = playerDeathCount[playerNum]++;
+    }
+
+    public void PlayerSpawn()
+    {
+        for (int i = 0; i < playerNum; i++)
+        {
+            GameObject tmp = Instantiate(playerPawn);
+            players.Add(tmp.transform);
+            tmp.transform.name = "Player" + i;
+            tmp.GetComponent<PlayerController>().playerNum = i;
+            tmp.GetComponent<deathAndRespawn>().respawn();
+            playerDeathCount.Add(0);
+        }
     }
 }
