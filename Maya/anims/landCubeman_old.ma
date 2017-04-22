@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
-//Name: landCubeman.ma
-//Last modified: Sat, Apr 22, 2017 02:20:49 PM
+//Name: landCubeman_old.ma
+//Last modified: Sat, Apr 22, 2017 02:19:57 PM
 //Codeset: 1252
 requires maya "2015";
 currentUnit -l centimeter -a degree -t film;
@@ -313,7 +313,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 4 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 20 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode lambert -n "Cubeman_rigForAnim:Cubeman_mat";
 	setAttr ".c" -type "float3" 0.11049499 0.30826432 0.53899997 ;
@@ -416,105 +416,113 @@ createNode dagPose -n "Cubeman_rigForAnim1:bindPose1";
 	setAttr ".bp" yes;
 createNode animCurveTL -n "root_translateX";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 8 0 11 0;
 createNode animCurveTL -n "root_translateY";
-	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
-	setAttr -s 2 ".kit[0:1]"  1 18;
-	setAttr -s 2 ".kix[0:1]"  0.2007640153169632 0.125;
-	setAttr -s 2 ".kiy[0:1]"  -71.165397644042969 0;
+	setAttr ".tan" 1;
+	setAttr -s 3 ".ktv[0:2]"  1 60 8 0 11 0;
+	setAttr -s 3 ".kit[2]"  18;
+	setAttr -s 3 ".kot[1:2]"  18 18;
+	setAttr -s 3 ".ktl[1:2]" no yes;
+	setAttr -s 3 ".kix[0:2]"  0.45438647270202637 0.2007640153169632 
+		0.125;
+	setAttr -s 3 ".kiy[0:2]"  0 -71.165397644042969 0;
+	setAttr -s 3 ".kox[0:2]"  0.45438647270202637 0.125 0.125;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
 createNode animCurveTL -n "root_translateZ";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 8 0 11 0;
 createNode animCurveTU -n "root_visibility";
 	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  1 1 4 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr -s 3 ".ktv[0:2]"  1 1 8 1 11 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "root_rotateX";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 8 0 11 0;
 createNode animCurveTA -n "root_rotateY";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 8 0 11 0;
 createNode animCurveTA -n "root_rotateZ";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 8 0 11 0;
 createNode animCurveTU -n "root_scaleX";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 1 4 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 8 1 11 1;
 createNode animCurveTU -n "root_scaleY";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 1 4 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 8 1 11 1;
 createNode animCurveTU -n "root_scaleZ";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 1 4 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 8 1 11 1;
 createNode animCurveTL -n "head_translateX";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 8 0 11 0;
 createNode animCurveTL -n "head_translateY";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 19.434717324189322 4 24;
+	setAttr -s 5 ".ktv[0:4]"  1 24 3 24 6 30.149594131333188 8 19.434717324189322
+		 11 24;
 createNode animCurveTL -n "head_translateZ";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 8 0 11 0;
 createNode animCurveTU -n "head_visibility";
 	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  1 1 4 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr -s 4 ".ktv[0:3]"  1 1 3 1 8 1 11 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "head_rotateX";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 8 0 11 0;
 createNode animCurveTA -n "head_rotateY";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 8 0 11 0;
 createNode animCurveTA -n "head_rotateZ";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 0 4 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 3 0 8 0 11 0;
 createNode animCurveTU -n "head_scaleX";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 1 4 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 3 1 6 0.89824341169945776 8 1 11 1;
 createNode animCurveTU -n "head_scaleY";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 1 4 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 3 1 6 0.89824341169945776 8 1 11 1;
 createNode animCurveTU -n "head_scaleZ";
 	setAttr ".tan" 18;
-	setAttr -s 2 ".ktv[0:1]"  1 1 4 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 3 1 6 0.89824341169945776 8 1 11 1;
 createNode animCurveTL -n "root_translateX1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 0 2 0 4 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 8 0 9 0 11 0;
 createNode animCurveTL -n "root_translateY1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 0 2 0 4 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 5 -8.5882137791901698 7 -15.136087611737153
+		 8 0 9 0 11 0;
 createNode animCurveTL -n "root_translateZ1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 0 2 0 4 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 8 0 9 0 11 0;
 createNode animCurveTU -n "root_visibility1";
 	setAttr ".tan" 9;
-	setAttr -s 3 ".ktv[0:2]"  1 1 2 1 4 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 8 1 9 1 11 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
 createNode animCurveTA -n "root_rotateX1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 0 2 0 4 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 8 0 9 0 11 0;
 createNode animCurveTA -n "root_rotateY1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 0 2 0 4 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 8 0 9 0 11 0;
 createNode animCurveTA -n "root_rotateZ1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 0 2 0 4 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 8 0 9 0 11 0;
 createNode animCurveTU -n "root_scaleX1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 1.2971214895155818 2 1.2971214895155818
-		 4 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 5 0.80673573221989603 7 0.80673573221989603
+		 8 1.2971214895155818 9 1.2971214895155818 11 1;
 createNode animCurveTU -n "root_scaleY1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 1 2 1 4 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 5 0.80673573221989603 7 0.80673573221989603
+		 8 1 9 1 11 1;
 createNode animCurveTU -n "root_scaleZ1";
 	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1 1.2971214895155818 2 1.2971214895155818
-		 4 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 5 0.80673573221989603 7 0.80673573221989603
+		 8 1.2971214895155818 9 1.2971214895155818 11 1;
 select -ne :time1;
-	setAttr ".o" 3;
-	setAttr ".unw" 3;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :renderPartition;
 	setAttr -s 4 ".st";
 select -ne :renderGlobalsList1;
@@ -709,4 +717,4 @@ connectAttr "Cubeman_rigForAnim1:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Cubeman_rigForAnim:Cubeman_mat.msg" ":defaultShaderList1.s" -na;
 connectAttr "Cubeman_rigForAnim1:Cubeman_mat.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of landCubeman.ma
+// End of landCubeman_old.ma
