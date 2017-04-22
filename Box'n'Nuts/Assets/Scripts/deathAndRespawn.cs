@@ -23,7 +23,7 @@ public class deathAndRespawn : MonoBehaviour
 		}
 		if (anim == null)
 		{
-			anim = GetComponent<animationController>();
+			anim = this.GetComponent<animationController>();
 		}
 		rig = player.GetComponent<Rigidbody>();
 	}
@@ -31,7 +31,10 @@ public class deathAndRespawn : MonoBehaviour
 
 	void Update()
 	{
-		
+		if (Input.GetKeyDown("space"))
+		{
+			anim.death();
+		}
 	}
 
     public void death()

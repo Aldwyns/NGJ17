@@ -25,7 +25,9 @@ public class animationController : MonoBehaviour {
 
 	public void death ()
 	{
-		anim.SetBool("death", true);
+		anim.SetTrigger("death");
+		anim.Play("spawning1");
+		Debug.Log("what?!");
 	}
 
 	public void spawn ()
