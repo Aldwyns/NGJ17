@@ -13,10 +13,11 @@ public class PlayerController : MonoBehaviour {
     float startJumpTime;
     Vector3 frameDir;
     Vector3 moveDir;
+	private Rigidbody rig;
 
 	// Use this for initialization
 	void Start () {
-	    	
+		rig = GetComponent<Rigidbody>();	
 	}
 	
 	// Update is called once per frame
@@ -71,5 +72,13 @@ public class PlayerController : MonoBehaviour {
 
 
         moveDir = moveDir * 0.5f;
+
+	}
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.GetComponent<Rigidbody>())
+		{
+			Debug.Log("motherfucka");
+		}
 	}
 }
