@@ -5,7 +5,7 @@ using UnityEngine;
 public class deathAndRespawn : MonoBehaviour
 {
 
-	public GameObject player;
+	public PlayerController player;
 	public float DeathzoneYValue = -5f;
 
 	private Rigidbody rig;
@@ -18,7 +18,7 @@ public class deathAndRespawn : MonoBehaviour
 	{
 		if (player==null)
 		{
-			player = this.gameObject;
+			player = this.gameObject.GetComponent<PlayerController>();
 		}
 		rig = player.GetComponent<Rigidbody>();
 	}
@@ -71,5 +71,6 @@ public class deathAndRespawn : MonoBehaviour
 
 		rig.velocity = Vector3.zero;
 		rig.angularVelocity = Vector3.zero;
+		player.setZeroVelocity();
 	}
 }
