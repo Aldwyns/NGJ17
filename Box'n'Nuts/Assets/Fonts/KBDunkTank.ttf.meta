@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d4580279794342e4bb34b50dec83a5ee
+timeCreated: 1492886128
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KBDunkTank
+  fontNames:
+  - KBDunkTank
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

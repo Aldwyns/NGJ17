@@ -82,7 +82,6 @@ public class UIController : MonoBehaviour {
                 if (child.transform.name == "Score")
                 {
                     child.GetComponent<Text>().text = LevelControllerObject.playerDeathCount[0].ToString();
-                    Debug.Log(LevelControllerObject.playerDeathCount[0].ToString());
                 }
             }
         }

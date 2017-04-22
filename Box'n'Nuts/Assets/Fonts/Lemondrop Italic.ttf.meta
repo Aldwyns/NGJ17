@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 98cd50ce466149b4b917048e4f572207
+timeCreated: 1492886128
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lemondrop
+  fontNames:
+  - Lemondrop
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0286f9c747c66a74ca894332b2f85eff, type: 3}
+  - {fileID: 12800000, guid: 4744f5fc088673a459cb3f46316aa359, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

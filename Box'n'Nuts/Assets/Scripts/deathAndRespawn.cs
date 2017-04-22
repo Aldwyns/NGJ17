@@ -26,10 +26,7 @@ public class deathAndRespawn : MonoBehaviour
 
 	void Update()
 	{
-		if (player.transform.position.y < DeathzoneYValue)
-		{
-            death();
-		}
+		
 	}
 
     public void death()

@@ -83,5 +83,12 @@
     <Compile Include="Assets\Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\deathAndRespawn.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Fonts\KGFonts-TOU.txt" />
+    <None Include="Assets\Fonts\License - READ THIS.txt" />
+    <None Include="Assets\Fonts\OFL_License.txt" />
+    <None Include="Assets\Fonts\pizzadudedotdk.txt" />
+    <None Include="Assets\Fonts\readme.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

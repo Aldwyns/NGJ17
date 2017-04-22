@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 43fb81be2a9eab741988980fb414c898
+timeCreated: 1492886128
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Namskin
+  fontNames:
+  - Namskin
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
