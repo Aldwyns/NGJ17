@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Box'n'Nuts.CSharp", "Box'n'Nuts.CSharp.csproj", "{3276303B-18C5-0BD0-0A78-F2999E3A86CF}"
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Box'n'Nuts", "Box'n'Nuts.csproj", "{41CF4663-02FD-DF6B-9E3D-6C858A8B6AF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3276303B-18C5-0BD0-0A78-F2999E3A86CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3276303B-18C5-0BD0-0A78-F2999E3A86CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3276303B-18C5-0BD0-0A78-F2999E3A86CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3276303B-18C5-0BD0-0A78-F2999E3A86CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41CF4663-02FD-DF6B-9E3D-6C858A8B6AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41CF4663-02FD-DF6B-9E3D-6C858A8B6AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41CF4663-02FD-DF6B-9E3D-6C858A8B6AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41CF4663-02FD-DF6B-9E3D-6C858A8B6AF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
