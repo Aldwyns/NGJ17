@@ -19,7 +19,6 @@ public class DeathField : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("god");
         if (other.transform.GetComponent<deathAndRespawn>())
         {
             other.transform.GetComponent<deathAndRespawn>().death();
