@@ -13,9 +13,11 @@ public class UIController : MonoBehaviour {
 
     public GameObject startTimerObj;
     public GameObject roundTimerObj;
+    public List<GameObject> countDown = new List<GameObject>();
+    public List<GameObject> winnerStuff = new List<GameObject>();
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         LevelControllerObject = FindObjectOfType<LevelController>();
         setupUI();
     }
@@ -87,7 +89,31 @@ public class UIController : MonoBehaviour {
 	void Update () {
         if (!uiSetup)
         {
-            startTimerObj.GetComponent<Text>().text = LevelControllerObject.startActiveTimer.ToString();
+            startTimerObj.GetComponent<Text>().enabled = false;
+            //startTimerObj.GetComponent<Text>().text = LevelControllerObject.startActiveTimer.ToString();
+            if (LevelControllerObject.startActiveTimer < 4.0f && LevelControllerObject.startActiveTimer > 3.0f)
+            {
+                countDown[0].GetComponent<MeshRenderer>().enabled = true;
+            }
+            if (LevelControllerObject.startActiveTimer < 3.0f && LevelControllerObject.startActiveTimer > 2.0f)
+            {
+                countDown[0].GetComponent<MeshRenderer>().enabled = false;
+                countDown[1].GetComponent<MeshRenderer>().enabled = true;
+            }
+            if (LevelControllerObject.startActiveTimer < 2.0f && LevelControllerObject.startActiveTimer > 1.0f)
+            {
+                countDown[1].GetComponent<MeshRenderer>().enabled = false;
+                countDown[2].GetComponent<MeshRenderer>().enabled = true;
+            }
+            if (LevelControllerObject.startActiveTimer < 1.0f && LevelControllerObject.startActiveTimer > 0.0f)
+            {
+                countDown[2].GetComponent<MeshRenderer>().enabled = false;
+                countDown[3].GetComponent<MeshRenderer>().enabled = true;
+            }
+            if (LevelControllerObject.startActiveTimer <= 0.0f)
+            {
+                countDown[3].GetComponent<MeshRenderer>().enabled = false;
+            }
         }
 
         if (LevelControllerObject.roundStarted && !uiSetup)
@@ -154,6 +180,16 @@ public class UIController : MonoBehaviour {
                         child.GetComponent<Image>().color = Color.white;
                     }
                 }
+            }
+        }
+        if (LevelControllerObject.gameEnded)
+        {
+            if (LevelControllerObject.draw)
+            {
+                winnerStuff[4].GetComponent<MeshRenderer>().enabled = true;
+            } else 
+            {
+                winnerStuff[LevelControllerObject.lowIndex].GetComponent<MeshRenderer>().enabled = true;
             }
         }
     }

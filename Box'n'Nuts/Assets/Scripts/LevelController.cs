@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour {
@@ -13,16 +14,18 @@ public class LevelController : MonoBehaviour {
 
     float timerStart;
     public bool roundStarted = false;
-    float startTimer = 3f;
+    float startTimer = 4f;
     public float startActiveTimer;
 
     public bool gameEnded = false;
     float roundTimer = 60f;
     public float roundActiveTimer;
 
+    public bool draw = false;
+    public int lowIndex = 0;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         timerStart = Time.time;
 
         if (FindObjectOfType<Data>())
@@ -30,10 +33,7 @@ public class LevelController : MonoBehaviour {
             playerNum = FindObjectOfType<Data>().playerCount;
         }
         PlayerSpawn();
-        foreach (string eh in Input.GetJoystickNames())
-        {
-            Debug.Log(eh);
-        }
+        
     }
 	
 	// Update is called once per frame
@@ -50,12 +50,18 @@ public class LevelController : MonoBehaviour {
             timerStart = Time.time;
             roundStarted = true;
         }
+        if (gameEnded && startActiveTimer < 0)
+        {
+            SceneManager.LoadScene("Scenes/Menu", LoadSceneMode.Single);
+        }
+
         if (roundStarted && roundActiveTimer < 0)
         {
             Debug.Log("Game Ended");
             gameEnded = true;
             int lowVal = 9999;
-            int lowIndex = 0;
+            lowIndex = 0;
+            draw = false;
             for (int i = 0; i < playerDeathCount.Count; i++)
             {
                 if (playerDeathCount[i] < lowVal)
@@ -64,8 +70,18 @@ public class LevelController : MonoBehaviour {
                     lowIndex = i;
                 }
             }
-            // lowIndex == Winner
-            for (int i = 0; i < players.Count; i++)
+            int tmp = 0;
+            for (int i = 0; i < playerDeathCount.Count; i++)
+            {
+                if (playerDeathCount[i] == lowVal)
+                {
+                    tmp++;
+                }
+            }
+            timerStart = Time.time;
+            if (tmp > 1) { draw = true; }
+                // lowIndex == Winner
+                for (int i = 0; i < players.Count; i++)
             {
                 players[i].GetComponent<PlayerController>().enabled = false;
 				if (i == lowIndex)
@@ -75,9 +91,7 @@ public class LevelController : MonoBehaviour {
 				{
 					players[i].GetComponent<PlayerController>().anim.losing();
 				}
-
-
-			}
+            }
         }
     }
 
