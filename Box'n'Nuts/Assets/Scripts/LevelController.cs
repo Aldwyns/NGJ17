@@ -11,19 +11,67 @@ public class LevelController : MonoBehaviour {
 
     public List<Material> colors = new List<Material>();
 
+    float timerStart;
+    public bool roundStarted = false;
+    float startTimer = 3f;
+    public float startActiveTimer;
+
+    public bool gameEnded = false;
+    float roundTimer = 60f;
+    public float roundActiveTimer;
+
+
 	// Use this for initialization
 	void Start () {
+        timerStart = Time.time;
+
         if (FindObjectOfType<Data>())
         {
             playerNum = FindObjectOfType<Data>().playerCount;
         }
         PlayerSpawn();
-	}
+        foreach (string eh in Input.GetJoystickNames())
+        {
+            Debug.Log(eh);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        startActiveTimer = startTimer - (Time.time - timerStart);
+        roundActiveTimer = roundTimer - (Time.time - timerStart);
+        
+        if (!roundStarted && startActiveTimer < 0)
+        {
+            foreach (Transform player in players)
+            {
+                player.GetComponent<PlayerController>().enabled = true;
+            }
+            timerStart = Time.time;
+            roundStarted = true;
+        }
+        if (roundStarted && roundActiveTimer < 0)
+        {
+            Debug.Log("Game Ended");
+            gameEnded = true;
+            int lowVal = 9999;
+            int lowIndex = 0;
+            for (int i = 0; i < playerDeathCount.Count; i++)
+            {
+                if (playerDeathCount[i] < lowVal)
+                {
+                    lowVal = playerDeathCount[i];
+                    lowIndex = i;
+                }
+            }
+            // lowIndex == Winner
+            for (int i = 0; i < players.Count; i++)
+            {
+                players[i].GetComponent<PlayerController>().enabled = false;
+                
+            }
+        }
+    }
 
     public void AddDeath(int playerNum)
     {
@@ -41,6 +89,7 @@ public class LevelController : MonoBehaviour {
             tmp.GetComponent<PlayerController>().playerNum = i;
             tmp.GetComponent<deathAndRespawn>().respawn();
             playerDeathCount.Add(0);
+            tmp.GetComponent<PlayerController>().enabled = false;
         }
     }
 }

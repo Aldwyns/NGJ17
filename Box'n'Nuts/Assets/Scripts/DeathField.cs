@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class DeathField : MonoBehaviour {
 
+	private soundController sounds;
+
 	// Use this for initialization
 	void Start () {
         transform.GetComponent<Collider>().isTrigger = true;
         transform.GetComponent<Collider>().enabled = true;
+		sounds = GetComponent<soundController>();
 
     }
 	
@@ -22,6 +25,9 @@ public class DeathField : MonoBehaviour {
         if (other.transform.GetComponent<deathAndRespawn>())
         {
             other.transform.GetComponent<deathAndRespawn>().death();
+			int playernum = other.transform.GetComponent<PlayerController>().playerNum;
+			sounds.death(playernum);
+
         }
     }
 }
