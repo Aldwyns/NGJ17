@@ -13,7 +13,7 @@ public class deathAndRespawn : MonoBehaviour
 	private float highLimitX = 9f;
 	private float lowLimitY = -3f;
 	private float highLimitY = 4f;
-	private animationController anim;
+	public animationController anim;
 
 	private void Start()
 	{
@@ -31,10 +31,6 @@ public class deathAndRespawn : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown("space"))
-		{
-			anim.death();
-		}
 	}
 
     public void death()
@@ -61,7 +57,7 @@ public class deathAndRespawn : MonoBehaviour
 
 		checkForRespawnCollision(randoXPos, randoYPos);
 		//Fireworks when respawning?
-		//anim.spawn();
+		anim.spawn();
 
 		//disable rigidbody while animating and for getting to know where you are?
 	}
