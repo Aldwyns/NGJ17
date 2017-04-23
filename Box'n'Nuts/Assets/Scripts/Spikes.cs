@@ -20,6 +20,7 @@ public class Spikes : MonoBehaviour {
         if (other.transform.GetComponent<deathAndRespawn>())
         {
             other.transform.GetComponent<deathAndRespawn>().death();
+			other.transform.GetComponent<PlayerController>().death();
         }
     }
 }
