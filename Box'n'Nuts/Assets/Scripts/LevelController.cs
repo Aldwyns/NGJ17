@@ -68,8 +68,16 @@ public class LevelController : MonoBehaviour {
             for (int i = 0; i < players.Count; i++)
             {
                 players[i].GetComponent<PlayerController>().enabled = false;
-                
-            }
+				if (i == lowIndex)
+				{
+					players[i].GetComponent<PlayerController>().anim.victory();
+				} else
+				{
+					players[i].GetComponent<PlayerController>().anim.losing();
+				}
+
+
+			}
         }
     }
 
