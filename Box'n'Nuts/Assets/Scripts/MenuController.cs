@@ -74,7 +74,7 @@ public class MenuController : MonoBehaviour {
     {
         FindObjectOfType<Data>().playerCount = playerNum -1;
         int ran = Random.Range(0, 2);
-        string tmp = "Scenes/Level_"+ran;
+        string tmp = "Scenes/Level_"+"2";
         
         SceneManager.LoadScene(tmp, LoadSceneMode.Single);
         
