@@ -25,8 +25,8 @@ public class DeathField : MonoBehaviour {
         if (other.transform.GetComponent<deathAndRespawn>())
         {
             other.transform.GetComponent<deathAndRespawn>().death();
-			int playernum = other.transform.GetComponent<PlayerController>().playerNum;
-			sounds.death(playernum);
+			other.transform.GetComponent<PlayerController>().death();
+			
 
         }
     }
