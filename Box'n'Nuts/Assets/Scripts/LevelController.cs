@@ -94,6 +94,7 @@ public class LevelController : MonoBehaviour {
             players.Add(tmp.transform);
             tmp.transform.name = "Player" + i;
             tmp.GetComponentInChildren<Renderer>().material = colors[i];
+			tmp.GetComponent<PlayerController>().phasemat = colors[i + 4];
             tmp.GetComponent<PlayerController>().playerNum = i;
             tmp.GetComponent<deathAndRespawn>().respawn();
             playerDeathCount.Add(0);
