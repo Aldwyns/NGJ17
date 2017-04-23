@@ -13,9 +13,12 @@ public class deathAndRespawn : MonoBehaviour
 	private float highLimitX = 9f;
 	private float lowLimitY = -3f;
 	private float highLimitY = 4f;
-	private animationController anim;
+	public animationController anim;
 
-	private void Start()
+    public List<SpawnArea> spawnAreas = new List<SpawnArea>();
+
+
+	void Awake()
 	{
 		if (player==null)
 		{
@@ -26,15 +29,16 @@ public class deathAndRespawn : MonoBehaviour
 			anim = this.GetComponent<animationController>();
 		}
 		rig = player.GetComponent<Rigidbody>();
+
+        foreach(SpawnArea child in FindObjectsOfType<SpawnArea>())
+        {
+            spawnAreas.Add(child);
+        }
 	}
 
 
 	void Update()
 	{
-		if (Input.GetKeyDown("space"))
-		{
-			anim.death();
-		}
 	}
 
     public void death()
@@ -51,17 +55,14 @@ public class deathAndRespawn : MonoBehaviour
 
 	public void respawn()
 	{
-		float randoXPos = Random.Range(lowLimitX, highLimitX);
-		float randoYPos = Random.Range(lowLimitY, highLimitY);
-		int randoOperator = Random.Range(0, 2);
-		if (randoOperator == 0)
-		{
-			randoXPos = -randoXPos;
-		}
+        int Ran = Random.Range(0, spawnAreas.Count);
+
+		float randoXPos = Random.Range(spawnAreas[Ran].lowX, spawnAreas[Ran].highX);
+		float randoYPos = Random.Range(spawnAreas[Ran].lowY, spawnAreas[Ran].highY);
 
 		checkForRespawnCollision(randoXPos, randoYPos);
 		//Fireworks when respawning?
-		//anim.spawn();
+		anim.spawn();
 
 		//disable rigidbody while animating and for getting to know where you are?
 	}
