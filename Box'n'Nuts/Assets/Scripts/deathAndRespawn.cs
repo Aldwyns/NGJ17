@@ -6,13 +6,8 @@ public class deathAndRespawn : MonoBehaviour
 {
 
 	public PlayerController player;
-	public float DeathzoneYValue = -5f;
 
 	private Rigidbody rig;
-	private float lowLimitX = 3f;
-	private float highLimitX = 9f;
-	private float lowLimitY = -3f;
-	private float highLimitY = 4f;
 	public animationController anim;
 
     public List<SpawnArea> spawnAreas = new List<SpawnArea>();
